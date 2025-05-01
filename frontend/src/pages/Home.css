@@ -1,26 +1,58 @@
+/* Home.css */
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .home-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #f8f8f8;
-    min-height: 80vh;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 80vh;
+  color: #333;
+  animation: fadeInUp 1s ease-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.home-container p {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeInUp 1.6s ease-out;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background: #007BFF;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
