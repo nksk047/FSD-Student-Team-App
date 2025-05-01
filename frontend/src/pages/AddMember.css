@@ -1,39 +1,69 @@
+/* AddMember.css */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .add-member-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .add-member-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .add-member-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .add-member-container input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .add-member-container button {
-    padding: 10px;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-member-container button:hover {
-    background-color: #1976D2;
-  }
-  
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.8s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-member-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.add-member-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-member-container input[type="text"],
+.add-member-container input[type="email"],
+.add-member-container input[type="file"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-member-container input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.add-member-container button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-member-container button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
